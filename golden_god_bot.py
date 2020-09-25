@@ -46,11 +46,14 @@ def get_golden_replies():
             golden_replies = list(filter(None, golden_replies))
     return golden_replies
 
-r = bot_login()
+def main():
+    r = bot_login()
+    comments_replied_to = get_saved_comments()
+    golden_replies = get_golden_replies()
+    print (comments_replied_to)
+    print (golden_replies)
+    while True:
+        run_bot(r, comments_replied_to, golden_replies)
 
-#comments_replied_to = get_saved_comments()
-#golden_replies = get_golden_replies()
-#print (comments_replied_to)
-#print (golden_replies)
-#while True:
-    #run_bot(r, comments_replied_to, golden_replies)
+if __name__ == "__main__":
+    main()
