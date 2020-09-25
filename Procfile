@@ -1,1 +1,1 @@
-web: python golden_god_bot.py
+worker: python golden_god_bot.py
