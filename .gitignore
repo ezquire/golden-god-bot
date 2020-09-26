@@ -1,3 +1,4 @@
 praw.ini
 /__pycache__/
+.env
 *~
